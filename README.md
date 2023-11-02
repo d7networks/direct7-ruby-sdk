@@ -44,7 +44,7 @@ require 'direct7'
 client = Direct7::Client.new('Your API token')
 
 # request_id is the id returned in the response of send_message
-@client.sms.get_status(request_id= '001a1a4e-0221-4cb7-a524-a2a5b337cbe8')
+client.sms.get_status(request_id= '001a1a4e-0221-4cb7-a524-a2a5b337cbe8')
 ```
 
 ### Send OTP
