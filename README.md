@@ -19,7 +19,7 @@ The SDK is designed to be easy to use. To get started, you need to create a clie
 ### Send SMS
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -29,7 +29,7 @@ client.sms.send_message( recipients =['+91999999XXXX'], content ='Greetings from
 ### Send SMS (Unicode)
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -39,7 +39,7 @@ client.sms.send_message(recipients = ["+97150900XXXX","+97845900XXX"], content =
 ### Get Request Status
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -50,7 +50,7 @@ client = Direct7::Client.new('Your API token')
 ### Send OTP
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -60,7 +60,7 @@ client.verify.send_otp(originator="SignOTP", recipient="+97150900XXXX", content 
 ### Re-Send OTP
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -70,7 +70,7 @@ client.verify.resend_otp(otp_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1")
 ### Verify OTP
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -80,7 +80,7 @@ client.verify.verify_otp(otp_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1", otp_code
 ### Get Request Status
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -91,7 +91,7 @@ client.verify.get_status(otp_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1")
 ### Send Viber Message
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -102,7 +102,7 @@ client.viber.send_viber_message(recipients=["+97150900XXXX","+97845900XXX"], con
 ### Get Request Status
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -113,7 +113,7 @@ client.viber.get_status(request_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1")
 ### Send Slack Message
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -124,7 +124,7 @@ client.slack.send_slack_message(content="Greetings from D7 API", work_space_name
 ### Get Request Status
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -135,7 +135,7 @@ client.slack.get_status(request_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1")
 ### Search Your Number details
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -145,7 +145,7 @@ client.number_lookup.search_number_details(recipient="+914257845XXXX")
 ### Send Whatsapp Free-form Message (Contact Details)
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -155,7 +155,7 @@ client.whatsapp.send_whatsapp_freeform_message(originator="91906152XXXX", recipi
 ### Send Whatsapp Templated Message.
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
@@ -165,7 +165,7 @@ client.whatsapp.send_whatsapp_templated_message(originator="91906152XXXX", recip
 ### Get Request Status
 
 ```ruby
-require 'stripe'
+require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
