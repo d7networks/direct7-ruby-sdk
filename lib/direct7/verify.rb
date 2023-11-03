@@ -1,5 +1,5 @@
 require 'json'
-require 'net/http'
+require 'net-http'
 require 'uri'
 require 'logger'
 
