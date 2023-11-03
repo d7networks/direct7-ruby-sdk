@@ -1,8 +1,1 @@
 require 'direct7'
-require 'direct7/client'
-require 'direct7/sms'
-require 'direct7/verify'
-require 'direct7/slack'
-require 'direct7/viber'
-require 'direct7/number_lookup'
-require 'direct7/whatsapp'
