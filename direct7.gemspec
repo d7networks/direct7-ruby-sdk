@@ -4,7 +4,7 @@ require "direct7/version"
 
 Gem::Specification.new do |spec|
     spec.name          = "direct7"
-    spec.version       = "0.0.3"
+    spec.version       = "0.0.5"
     spec.authors       = ["Direct7 Networks"]
     spec.email         = ["support@d7networks.com"]
     spec.summary       = "Ruby SDK for Direct7 Platform REST API"
@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
     spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
     spec.require_paths = ["lib"]
   
-    spec.add_dependency "json"
+    spec.add_dependency 'json', '>= 0'
+    spec.add_dependency "http"
     spec.add_development_dependency "bundler"
   end

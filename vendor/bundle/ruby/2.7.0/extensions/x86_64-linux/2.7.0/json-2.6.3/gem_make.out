@@ -1,0 +1,13 @@
+current directory: /home/sisira/projects/live/direct7-ruby-sdk/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+/home/sisira/.rbenv/versions/2.7.4/bin/ruby -I /home/sisira/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231103-73329-uht2w0.rb extconf.rb
+creating Makefile
+
+current directory: /home/sisira/projects/live/direct7-ruby-sdk/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/sisira/projects/live/direct7-ruby-sdk/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/sisira/projects/live/direct7-ruby-sdk/vendor/bundle/ruby/2.7.0/gems/json-2.6.3/ext/json
+make "DESTDIR=" install
