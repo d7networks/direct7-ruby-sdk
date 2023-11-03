@@ -1,3 +1,7 @@
+$LOAD_PATH.unshift(::File.join(::File.dirname(__FILE__), "lib"))
+
+require "direct7/version"
+
 Gem::Specification.new do |spec|
     spec.name          = "direct7"
     spec.version       = "0.0.2"

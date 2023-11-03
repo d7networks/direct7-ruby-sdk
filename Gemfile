@@ -1,6 +1,8 @@
 # Gemfile
 source 'https://rubygems.org'
 
+gemspec
+
 group :development do
   gem 'rake', '13.1.0'
   gem 'minitest'
