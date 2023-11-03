@@ -1,3 +1,4 @@
+require 'direct7'
 require 'direct7/client'
 require 'direct7/sms'
 require 'direct7/verify'
