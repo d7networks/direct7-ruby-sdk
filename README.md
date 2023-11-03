@@ -13,7 +13,7 @@ gem install direct7
 
 ## Usage
 
-The SDK is designed to be easy to use. To get started, you need to create a client instance:
+The SDK is designed to be easy to use. The library needs to be configured with your account's secret key, which is available in your [Direct7 Dashboard](https://app.d7networks.com/api-tokens). To get started, create a client instance by providing the key. If you haven't already, you can Login [here](https://app.d7networks.com/signin) to access your dashboard.
 
 
 ### Send SMS

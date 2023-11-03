@@ -6,4 +6,5 @@ group :development do
   gem 'minitest'
   gem 'net-http-persistent', '~> 4.0'
   gem 'http', '5.1.1' 
+  gem 'yard'
 end
