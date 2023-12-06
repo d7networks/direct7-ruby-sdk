@@ -4,8 +4,20 @@ This Ruby SDK provides a convenient and easy-to-use interface to the Direct7 RES
 all the operations that are available through the REST API.
 
 ## Installation
+The SDK is available on RubyGems and can be installed using two methods:
+Add this line to your application's Gemfile:
 
-The SDK is available on RubyGems and can be installed using `gem`:
+```bash
+gem 'direct7', '~> 0.0.9'
+```
+
+And then execute:
+
+```bash
+bundle install
+```
+
+Or install it yourself as:
 
 ```bash
 gem install direct7
