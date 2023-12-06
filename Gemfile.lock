@@ -1,8 +1,11 @@
 PATH
   remote: .
   specs:
-    direct7 (0.0.3)
+    direct7 (0.0.9)
+      http
       json
+      net-http-persistent (~> 4.0)
+      rake (~> 13.1.0)
 
 GEM
   remote: https://rubygems.org/

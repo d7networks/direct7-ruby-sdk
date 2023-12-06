@@ -4,7 +4,7 @@ require "direct7/version"
 
 Gem::Specification.new do |spec|
     spec.name          = "direct7"
-    spec.version       = "0.0.8"
+    spec.version       = "0.0.9"
     spec.authors       = ["Direct7 Networks"]
     spec.email         = ["support@d7networks.com"]
     spec.summary       = "Ruby SDK for Direct7 Platform REST API"
@@ -19,5 +19,7 @@ Gem::Specification.new do |spec|
   
     spec.add_dependency 'json'
     spec.add_dependency "http"
+    spec.add_dependency "net-http-persistent", "~> 4.0"
+    spec.add_dependency "rake", "~> 13.1.0"
     spec.add_development_dependency "bundler"
   end
