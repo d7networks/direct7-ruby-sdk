@@ -22,4 +22,5 @@ Gem::Specification.new do |spec|
     spec.add_dependency "net-http-persistent", "~> 4.0"
     spec.add_dependency "rake", "~> 13.1.0"
     spec.add_development_dependency "bundler"
+     gem.add_development_dependency "rspec"
   end
