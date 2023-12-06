@@ -1,9 +1,10 @@
+lib/direct7.rb a9f2ee8ed36eb3830ecc043e17e30b3e70c3c873
 lib/direct7/sms.rb 7d57181292235711bb4610b957ee3e0715cec8cf
 lib/direct7/slack.rb ea1a79de50ea3d22e237480f03970e031227517f
 lib/direct7/viber.rb 5e93001f27815e3f2367e045718e64dcca1e766d
 lib/direct7/client.rb 638c002064a53b934ced7e32370d453e4b217de9
 lib/direct7/verify.rb 9d003f4974f24e7de15261a091dd972eb4d6afb3
-lib/direct7/version.rb f96cacaf463325cf5653197c59419951769129fa
+lib/direct7/version.rb 76c13851f51b1c4428bf801e1326d10f0156c29d
 lib/direct7/whatsapp.rb add9032d155bb5e6c09b4e168d16126727cc65fd
 lib/direct7/errors/errors.rb 2a9b9500cb341936babfcc030c44b1d47dd7e867
 lib/direct7/number_lookup.rb faae97092cde828070d7401bff116855e0658738
