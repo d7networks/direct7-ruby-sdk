@@ -8,7 +8,7 @@ The SDK is available on RubyGems and can be installed using two methods:
 Add this line to your application's Gemfile:
 
 ```bash
-gem 'direct7', '~> 0.0.11'
+gem 'direct7', '~> 0.0.12'
 ```
 
 And then execute:
@@ -35,7 +35,12 @@ require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
-client.sms.send_message( recipients =['+91999999XXXX'], content ='Greetings from D7 API', originator ='SignOTP', report_url ='https://the_url_to_recieve_delivery_report.com', unicode =true)
+client.sms.send_message(
+        originator='SignOTP',
+        report_url='https://the_url_to_recieve_delivery_report.com',
+        schedule_time=nil,
+        { recipients: ['+919999XXXXXX'], content: 'Greetings from D7 API', unicode: false }
+        )
 ```
 
 ### Send SMS (Unicode)
@@ -45,7 +50,12 @@ require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
-client.sms.send_message(recipients = ["+97150900XXXX","+97845900XXX"], content = "مرحبا بالعالم!", originator = "SignOTP", report_url = "https://the_url_to_recieve_delivery_report.com", unicode = True)
+client.sms.send_message(
+        originator='SignOTP',
+        report_url='https://the_url_to_recieve_delivery_report.com',
+        schedule_time=nil,
+        { recipients: ['+919999XXXXXX'], content: "مرحبا بالعالم!", unicode: true }
+        )
 ```
 
 ### Get Request Status

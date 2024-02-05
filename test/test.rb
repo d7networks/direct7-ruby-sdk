@@ -1,20 +1,19 @@
-require './lib/direct7/client'
-require './lib/direct7/errors/errors'
+require '../lib/direct7/client'
+require '../lib/direct7/errors/errors'
 require 'test/unit'
 require_relative '../lib/direct7/client'
 
 class TestSERVICES < Test::Unit::TestCase
   def setup
-    @client = Direct7::Client.new('Your API token')
+    @client = Direct7::Client.new('Your API Token')
   end
 
   def test_send_message
     response1 = @client.sms.send_message(
-        recipients =['+91999999XXXX'],
-        content ='Greetings from D7 API',
-        originator ='SignOTP',
-        report_url ='https://the_url_to_recieve_delivery_report.com',
-        unicode =true
+        originator='SignOTP',
+        report_url='https://the_url_to_recieve_delivery_report.com',
+        schedule_time=nil,
+        { recipients: ['+991999999XXXX'], content: 'Greetings from D7 API', unicode: false }
     )
     puts response1
     response2 = @client.sms.get_status(request_id= '001a1a4e-0221-4cb7-a524-a2a5b337cbe8')

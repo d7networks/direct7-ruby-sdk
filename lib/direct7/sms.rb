@@ -8,23 +8,28 @@ module Direct7
         @client = client
       end
   
-      def send_message(recipients, content, originator, report_url = nil, unicode = false)
-        message = {
-          'channel' => 'sms',
-          'content' => content,
-          'msg_type' => 'text',
-          'data_coding' => unicode ? 'unicode' : 'text',
-          'recipients' => recipients
-        };
+      def send_message(originator, report_url, schedule_time, *args)
+        messages = []
+        args.each do |message|
+          messages << {
+            'channel' => 'sms',
+            'recipients' => message[:recipients] || [],
+            'content' => message[:content] || '',
+            'msg_type' => 'text',
+            'data_coding' => message[:unicode] ? 'unicode' : 'text'
+          }
+        end
         message_globals = {
           'originator' => originator,
           'report_url' => report_url,
+          'schedule_time' => schedule_time
         };
-        response = @client.post(@client.host, '/messages/v1/send', true, params= {
-          'messages' => [message],
-          'message_globals' => message_globals
-        })
-        # puts "Message sent successfully."
+        payload = {
+            'messages' => messages,
+            'message_globals' => message_globals
+        }
+        response = @client.post(@client.host, '/messages/v1/send', true,  params=payload)
+        puts "Message sent successfully."
         response
       end
   
