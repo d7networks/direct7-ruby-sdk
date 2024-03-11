@@ -58,9 +58,31 @@ class TestSERVICES < Test::Unit::TestCase
     response = @client.whatsapp.send_whatsapp_freeform_message(
         originator= "91906154XXXX",
         recipient= "+91999999XXXX",
-        message_type="CONTACTS", first_name="Amal", last_name="Anu", display_name="Amal Anu", phone="91906152XXXX", email = "amal@gmail.com"
+        message_type="CONTACTS", first_name="Amal", last_name="Anu", formatted_name="Amal Anu", phones=["91906152XXXX"], emails = ["amal@gmail.com"]
     )
     response = @client.whatsapp.get_status(request_id="81eca535-8131-4866-be18-b3d933604069")
+    puts response
+  end
+
+  def test_send_whatsapp_freeform_message_text
+    response = @client.whatsapp.send_whatsapp_freeform_message(
+      originator= "+XXXXXXXXXXXX",
+      recipient= "XXXXXXXXXXX",
+      message_type= "TEXT",
+      body= "Hi",
+    )
+    puts response
+  end
+
+  def test_send_whatsapp_freeform_message_attachment
+    response = @client.whatsapp.send_whatsapp_freeform_message(
+      originator= "+XXXXXXXXXXXX",
+      recipient= "XXXXXXXXXXX",
+      message_type= "ATTACHMENT",
+      type= "image",
+      url= "https=//upload.wikimedia.org",
+      caption= "Tet"
+    )
     puts response
   end
 end
