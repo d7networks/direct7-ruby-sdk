@@ -4,7 +4,7 @@ require "direct7/version"
 
 Gem::Specification.new do |spec|
     spec.name          = "direct7"
-    spec.version       = "0.0.12"
+    spec.version       = "0.0.13"
     spec.authors       = ["Direct7 Networks"]
     spec.email         = ["support@d7networks.com"]
     spec.summary       = "Ruby SDK for Direct7 Platform REST API"
