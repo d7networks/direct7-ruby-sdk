@@ -5,7 +5,7 @@ require_relative '../lib/direct7/client'
 
 class TestSERVICES < Test::Unit::TestCase
   def setup
-    @client = Direct7::Client.new('Your API Token')
+    @client = Direct7::Client.new('API TOKEN')
   end
 
   def test_send_message
@@ -55,9 +55,12 @@ class TestSERVICES < Test::Unit::TestCase
     media_url="https://d7networks.com/static/resources/css/img/favicon.d27f70e6ebd0.png"
     )
     puts response
+  end
+  def test_send_whatsapp_freeform_contact
+    # freeform contacts
     response = @client.whatsapp.send_whatsapp_freeform_message(
-        originator= "91906154XXXX",
-        recipient= "+91999999XXXX",
+        originator= "XXXXXXXXXXXX",
+        recipient= "+XXXXXXXXXXXX",
         message_type="CONTACTS", first_name="Amal", last_name="Anu", formatted_name="Amal Anu", phones=["91906152XXXX"], emails = ["amal@gmail.com"]
     )
     response = @client.whatsapp.get_status(request_id="81eca535-8131-4866-be18-b3d933604069")
@@ -84,5 +87,5 @@ class TestSERVICES < Test::Unit::TestCase
       caption= "Tet"
     )
     puts response
-  end
+#   end
 end
