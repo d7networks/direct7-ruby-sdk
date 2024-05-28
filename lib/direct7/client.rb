@@ -82,13 +82,13 @@ module Direct7
         puts "Client error: #{response.code} #{response.body.inspect}"
           case response.code.to_i
           when 400
-            raise BadRequest, response.body.inspect
+            raise BadRequest, response.body
           when 404
-            raise NotFoundError, response.body.inspect
+            raise NotFoundError, response.body
           when 402
-            raise InsufficientCreditError, response.body.inspect
+            raise InsufficientCreditError, response.body
           when 422
-            raise ValidationError, response.body.inspect
+            raise ValidationError, response.body
           else
             raise ClientError, "#{response.code} response from #{host}"
           end

@@ -8,7 +8,7 @@ The SDK is available on RubyGems and can be installed using two methods:
 Add this line to your application's Gemfile:
 
 ```bash
-gem 'direct7', '~> 0.0.14'
+gem 'direct7', '~> 0.0.15'
 ```
 
 And then execute:
@@ -164,14 +164,23 @@ client = Direct7::Client.new('Your API token')
 client.number_lookup.search_number_details(recipient="+914257845XXXX")
 ```
 
-### Send Whatsapp Free-form Message (Contact Details)
+### Send Whatsapp Free-form Message (Location Details)
 
 ```ruby
 require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
-client.whatsapp.send_whatsapp_freeform_message(originator="91906152XXXX", recipient="91906152XXXX", message_type="CONTACTS", first_name="Amal", last_name="Anu", formatted_name="Amal Anu", phones=["91906152XXXX", "91906152XXXX"], emails = ["amal@gmail.com", "amal@gmail.com"])
+client.whatsapp.send_whatsapp_freeform_message(
+    originator='{originator}',
+    recipient='{recipient}',
+    message_type='LOCATION',
+    body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, 
+    latitude='12.93803129081362', 
+    longitude='77.61088653615994', 
+    name='Mobile Pvt Ltd', 
+    address='Bengaluru, Karnataka 56009'
+)
 ```
 
 ### Send Whatsapp Templated Message.
@@ -181,7 +190,39 @@ require 'direct7'
 
 client = Direct7::Client.new('Your API token')
 
-client.whatsapp.send_whatsapp_templated_message(originator="91906152XXXX", recipient="91906152XXXX", message_type="TEMPLATE", template_id="monthly_promotion", body_parameter_values={"0": "promotion"})
+client.whatsapp.send_whatsapp_templated_message(
+    originator='{originator}', 
+    recipient='{recipient}',
+    template_id="{template_id}", 
+    language="en",
+    body_parameter_values=nil,
+    media_type="image",
+    text_header_title=nil,
+    media_url='https://miro.medium.com/max/780/1*9Wdo1PuiJTZo0Du2A9JLQQ.jpeg'
+)
+```
+
+### Send Whatsapp Interactive Message: CTA.
+
+```ruby
+require 'direct7'
+
+client = Direct7::Client.new('Your API token')
+parameters = {
+          "display_text": "Visit Us",
+          "url": "https://www.luckyshrub.com?clickID=kqDGWd24Q5TRwoEQTICY7W1JKoXvaZOXWAS7h1P76s0R7Paec4"
+        }
+client.whatsapp.send_whatsapp_templated_message(
+    originator='{originator}', 
+    recipient='{recipient}',
+    interactive_type= "cta_url",
+    header_type= "text",
+    header_text= "Payment$ for D7 Whatsapp Service",
+    header_link=nil, header_file_name=nil,
+    body_text= "Direct7 Networks is a messaging service provider that specializes in helping organizations efficiently communicate with their customers.",
+    footer_text= "Thank You",
+    parameters= parameters
+)
 ```
 
 ### Get Request Status
