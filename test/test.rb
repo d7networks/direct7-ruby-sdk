@@ -544,6 +544,89 @@ class TestSERVICES < Test::Unit::TestCase
     puts response
   end
 
+   # Interactive : location request
+   def test_send_whatsapp_interactive_message
+    response = @client.whatsapp.send_whatsapp_interactive_message(
+      originator='971563XXXXXX', 
+      recipient='991999999XXXX',
+      interactive_type= "location_request_message",
+      header_type= nil,
+      header_text= nil,
+      header_link=nil, header_file_name=nil,
+      body_text= "Lets make a trip!",
+      footer_text= nil,
+      parameters= nil, sections=nil, 
+      buttons=nil
+    )
+    puts response
+  end
+
+    # Interactive : address message
+    def test_send_whatsapp_interactive_message
+      parameters = {
+        "country": "IN",
+        "values": {
+           "name": "Steni Mariya",
+           "phone_number": "+97156965xxxx",
+           "in_pin_code": 680026,
+           "house_number": "45",
+           "floor_number": "3",
+          "tower_number": 34,
+          "building_name": "Excel",
+          "address": "House name",
+          "landmark_area": "Near Mobile Tower",
+          "city": "Thrissur",
+          "state": "Kerala"
+        },
+      "saved_addresses": [
+          {
+          "id": "address1",
+           "value": {
+           "name": "Lifiya Mariya",
+           "phone_number": "+971569xxxxx",
+           "in_pin_code": 680026,
+           "house_number": "45",
+           "floor_number": "3",
+          "tower_number": 34,
+          "building_name": "Excel",
+          "address": "House name",
+          "landmark_area": "Near Mobile Tower",
+          "city": "Thrissur",
+          "state": "Kerala"
+        }
+          },
+          {
+          "id": "address1",
+           "value": {
+           "name": "Mariya",
+           "phone_number": "+971569658xxx",
+           "in_pin_code": 680026,
+           "house_number": "45",
+           "floor_number": "3",
+          "tower_number": 34,
+          "building_name": "Excel",
+          "address": "House name",
+          "landmark_area": "Near Mobile Tower",
+          "city": "Thrissur",
+          "state": "Kerala"
+        }
+          }
+      ]
+     }
+      response = @client.whatsapp.send_whatsapp_interactive_message(
+        originator='971563XXXXXX', 
+        recipient='991999999XXXX',
+        interactive_type= "address_message",
+        header_type= "text",
+        header_text= "Payment$ for D7 Whatsapp Service",
+        header_link=nil, header_file_name=nil,
+        body_text= "Direct7 Networks is a messaging service provider that specializes in helping organizations efficiently communicate with their customers.",
+        footer_text= "Thank You",
+        parameters= parameters
+      )
+      puts response
+    end
+
   #  Interactive : list
   def test_send_whatsapp_interactive_message
     sections = [

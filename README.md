@@ -8,7 +8,7 @@ The SDK is available on RubyGems and can be installed using two methods:
 Add this line to your application's Gemfile:
 
 ```bash
-gem 'direct7', '~> 0.0.15'
+gem 'direct7', '~> 0.0.16'
 ```
 
 And then execute:

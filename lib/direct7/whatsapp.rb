@@ -215,6 +215,14 @@ module Direct7
               'sections' => sections,
               'button' => list_button_text
           }
+        elsif interactive_type == 'location_request_message'
+          message['content']['interactive']['action'] = {
+              'name' => "send_location"
+          }
+        elsif interactive_type == 'address_message'
+          message['content']['interactive']['action'] = {
+              'parameters' => parameters,
+          }
         end
       end
 
