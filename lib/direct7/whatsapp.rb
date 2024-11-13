@@ -241,7 +241,7 @@ module Direct7
     end
 
     def read_receipt(message_id)
-      response = @client.get(
+      response = @client.post(
         @client.host,
         "/whatsapp/v2/read-receipt/#{message_id}"
       )
