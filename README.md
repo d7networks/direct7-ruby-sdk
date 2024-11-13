@@ -8,7 +8,7 @@ The SDK is available on RubyGems and can be installed using two methods:
 Add this line to your application's Gemfile:
 
 ```bash
-gem 'direct7', '~> 0.0.16'
+gem 'direct7', '~> 0.0.17'
 ```
 
 And then execute:
@@ -234,6 +234,17 @@ client = Direct7::Client.new('Your API token')
 
 # request_id is the id returned in the response of send_message
 client.whatsapp.get_status(request_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1")
+```
+
+### Read Receipt
+
+```ruby
+require 'direct7'
+
+client = Direct7::Client.new('Your API token')
+
+# message_id is the id shown in the api reports
+client.whatsapp.read_receipt(message_id="9612c7f5-2ba5-49db-8901-4ee9be6dc8d1")
 ```
 
 ## FAQ

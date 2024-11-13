@@ -239,5 +239,14 @@ module Direct7
       @log.info('Message status retrieved successfully.')
       response
     end
+
+    def read_receipt(message_id)
+      response = @client.get(
+        @client.host,
+        "/whatsapp/v2/read-receipt/#{message_id}"
+      )
+      @log.info('Message marked as read successfully.')
+      response
+    end
   end
 end
