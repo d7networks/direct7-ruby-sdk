@@ -248,5 +248,14 @@ module Direct7
       @log.info('Message marked as read successfully.')
       response
     end
+
+   def download_media(media_id)
+     response = @client.get(
+       @client.host,
+       "/whatsapp/v2/download/#{media_id}"
+     )
+     @log.info('Successfully downloaded media.')
+     response
+   end
   end
 end
