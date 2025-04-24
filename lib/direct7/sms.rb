@@ -8,7 +8,7 @@ module Direct7
         @client = client
       end
   
-      def send_message(originator, report_url, schedule_time, *args)
+      def send_message(originator, report_url, schedule_time, tag, *args)
         messages = []
         args.each do |message|
           messages << {
@@ -22,7 +22,8 @@ module Direct7
         message_globals = {
           'originator' => originator,
           'report_url' => report_url,
-          'schedule_time' => schedule_time
+          'schedule_time' => schedule_time,
+          'tag' => tag
         };
         payload = {
             'messages' => messages,
