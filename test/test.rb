@@ -118,21 +118,21 @@ class TestSERVICES < Test::Unit::TestCase
     response = @client.whatsapp.send_whatsapp_freeform_message(
         originator= "971563XXXXXX",
         recipient= "991999999XXXX",
-        message_type="CONTACTS", 
+        message_type="CONTACTS",
         body=nil,
         first_name="Barbara",
         last_name="Johnson",
         formatted_name="Barbara J. Johnson",
-        middle_name="Joana", 
+        middle_name="Joana",
         suffix="Esq.",
         prefix="Dr.",
         birthday='4567-12-12',
-        phones=phones, 
+        phones=phones,
         emails=emails,
         urls=urls,
         latitude=nil, longitude=nil, name=nil, address=nil, type=nil, url=nil, caption=nil, filename=nil, message_id=nil, emoji=nil,
         contact_addresses=contact_addresses,
-        
+
     )
     # response = @client.whatsapp.get_status(request_id="81eca535-8131-4866-be18-b3d933604069")
     puts response
@@ -145,7 +145,7 @@ class TestSERVICES < Test::Unit::TestCase
       recipient='+991999999XXXX',
       message_type='TEXT',
       body='HI',
-      
+
     )
     puts response
   end
@@ -171,9 +171,9 @@ class TestSERVICES < Test::Unit::TestCase
         originator='971563XXXXXX',
         recipient='+991999999XXXX',
         message_type='ATTACHMENT',
-        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil, 
-        type='image', 
-        url='https://t4.ftcdn.net/jpg/01/43/23/83/360_F_143238306_lh0ap42wgot36y44WybfQpvsJB5A1CHc.jpg', 
+        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil,
+        type='image',
+        url='https://t4.ftcdn.net/jpg/01/43/23/83/360_F_143238306_lh0ap42wgot36y44WybfQpvsJB5A1CHc.jpg',
         caption='Tet'
       )
       puts response
@@ -186,9 +186,9 @@ class TestSERVICES < Test::Unit::TestCase
         originator='971563XXXXXX',
         recipient='+991999999XXXX',
         message_type='ATTACHMENT',
-        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil, 
-        type='video', 
-        url='https://www.onirikal.com/videos/mp4/nestlegold.mp4', 
+        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil,
+        type='video',
+        url='https://www.onirikal.com/videos/mp4/nestlegold.mp4',
         caption='Tet'
       )
       puts response
@@ -200,9 +200,9 @@ class TestSERVICES < Test::Unit::TestCase
         originator='971563XXXXXX',
         recipient='+991999999XXXX',
         message_type='ATTACHMENT',
-        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil, 
-        type='document', 
-        url='https://www.clickdimensions.com/links/TestPDFfile.pdf', 
+        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil,
+        type='document',
+        url='https://www.clickdimensions.com/links/TestPDFfile.pdf',
         caption= "Test PDF file pdf",
         filename= "TestPDFfile.pdf"
       )
@@ -215,8 +215,8 @@ class TestSERVICES < Test::Unit::TestCase
         originator='971563XXXXXX',
         recipient='+991999999XXXX',
         message_type='ATTACHMENT',
-        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil, 
-        type='audio', 
+        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil,
+        type='audio',
         url='http://fate-suite.ffmpeg.org/mpegaudio/extra_overread.mp3'
       )
       puts response
@@ -229,8 +229,8 @@ class TestSERVICES < Test::Unit::TestCase
         originator='971563XXXXXX',
         recipient='+991999999XXXX',
         message_type='ATTACHMENT',
-        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil, 
-        type='sticker', 
+        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, latitude=nil, longitude=nil, name=nil, address=nil,
+        type='sticker',
         url='https://raw.githubusercontent.com/sagarbhavsar4328/dummys3bucket/master/sample3.webp'
       )
       puts response
@@ -242,10 +242,10 @@ class TestSERVICES < Test::Unit::TestCase
         originator='971563XXXXXX',
         recipient='+991999999XXXX',
         message_type='LOCATION',
-        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil, 
-        latitude='12.93803129081362', 
-        longitude='77.61088653615994', 
-        name='Mobile Pvt Ltd', 
+        body=nil, first_name=nil, last_name=nil, formatted_name=nil, middle_name=nil, suffix=nil, prefix=nil, birthday=nil, phones=nil, emails=nil, urls=nil,
+        latitude='12.93803129081362',
+        longitude='77.61088653615994',
+        name='Mobile Pvt Ltd',
         address='Bengaluru, Karnataka 56009'
       )
       puts response
@@ -254,7 +254,7 @@ class TestSERVICES < Test::Unit::TestCase
   # // Templated: no body parm
   def test_send_whatsapp_templated_message
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
       template_id="testing_alpha", language="en"
     )
@@ -264,9 +264,9 @@ class TestSERVICES < Test::Unit::TestCase
   # // Templated: with body parm
   def test_send_whatsapp_templated_message
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
-      template_id="with_personalize", 
+      template_id="with_personalize",
       language="en",
       body_parameter_values={"0": "Anil"}
     )
@@ -276,7 +276,7 @@ class TestSERVICES < Test::Unit::TestCase
   # Templated: Text
   def test_send_whatsapp_templated_message
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
       template_id="header_param", language="en",
       body_parameter_values=nil,
@@ -289,9 +289,9 @@ class TestSERVICES < Test::Unit::TestCase
   # Templated: Image
   def test_send_whatsapp_templated_message
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
-      template_id="image", 
+      template_id="image",
       language="en",
       body_parameter_values=nil,
       media_type="image",
@@ -304,9 +304,9 @@ class TestSERVICES < Test::Unit::TestCase
    # Templated: Video
    def test_send_whatsapp_templated_message
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
-      template_id="video", 
+      template_id="video",
       language="en",
       body_parameter_values=nil,
       media_type="video",
@@ -319,9 +319,9 @@ class TestSERVICES < Test::Unit::TestCase
    # Templated: document
    def test_send_whatsapp_templated_message
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
-      template_id="document", 
+      template_id="document",
       language="en",
       body_parameter_values={"0": "first_parameter_in_your_template"},
       media_type="document",
@@ -334,9 +334,9 @@ class TestSERVICES < Test::Unit::TestCase
   # Templated: Location
   def test_send_whatsapp_templated_message
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
-      template_id='location', 
+      template_id='location',
       language='en',
       body_parameter_values=nil,
       media_type='location',
@@ -362,16 +362,44 @@ class TestSERVICES < Test::Unit::TestCase
           }
       ]
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
-      template_id="quick_reply", 
+      template_id="quick_reply",
       language="en",
       body_parameter_values=nil, media_type=nil, text_header_title=nil, media_url=nil, latitude=nil, longitude=nil, name=nil, address=nil,lto_expiration_time_ms=nil, coupon_code=nil,
       quick_replies=quick_replies
     )
     puts response
   end
-    
+
+   # Templated :button_flow
+    button_flow=[
+              {"flow_token":"unused",
+                "action_type":"flow",
+                "index":"0",
+                "flow_action_data":{}
+                }
+            ]
+    def test_send_whatsapp_templated_message
+    button_flow=[
+              {"flow_token":"unused",
+                "action_type":"flow",
+                "index":"0",
+                "flow_action_data":{}
+                }
+            ]
+    response = @client.whatsapp.send_whatsapp_templated_message(
+       originator='971563XXXXXX',
+      recipient='991999999XXXX',
+      template_id="call_to_action",
+      language="en",
+      body_parameter_values=nil, media_type=nil, text_header_title=nil, media_url=nil, latitude=nil, longitude=nil, name=nil, address=nil,lto_expiration_time_ms=nil, coupon_code=nil,
+      quick_replies=nil,
+      actions=nil,
+      button_flow=button_flow
+    )
+    puts response
+  end
 
    # Templated: actions
   actions = [
@@ -381,7 +409,7 @@ class TestSERVICES < Test::Unit::TestCase
       "action_payload" => "dash"
     }
   ]
-  
+
   def test_send_whatsapp_templated_message
     actions = [
       {
@@ -391,9 +419,9 @@ class TestSERVICES < Test::Unit::TestCase
       }
     ]
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
-      template_id="call_to_action", 
+      template_id="call_to_action",
       language="en",
       body_parameter_values=nil, media_type=nil, text_header_title=nil, media_url=nil, latitude=nil, longitude=nil, name=nil, address=nil,lto_expiration_time_ms=nil, coupon_code=nil,
       quick_replies=nil,
@@ -405,11 +433,11 @@ class TestSERVICES < Test::Unit::TestCase
   # // Templated: coupon_code
   def test_send_whatsapp_templated_message
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
-      template_id="coupon_code", 
+      template_id="coupon_code",
       language="en",
-      body_parameter_values={"0": "first_parameter_in_your_template"}, 
+      body_parameter_values={"0": "first_parameter_in_your_template"},
       media_type=nil, text_header_title=nil, media_url=nil, latitude=nil, longitude=nil, name=nil, address=nil,lto_expiration_time_ms=nil,
       coupon_code="DAS558HG"
     )
@@ -419,7 +447,7 @@ class TestSERVICES < Test::Unit::TestCase
   # Templated: LTO
   def test_send_whatsapp_templated_message
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
       template_id="limited_time_offer", language="en",
       body_parameter_values=nil,
@@ -492,9 +520,9 @@ class TestSERVICES < Test::Unit::TestCase
         }
       ]
     response = @client.whatsapp.send_whatsapp_templated_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
-      template_id="carousel_card", 
+      template_id="carousel_card",
       language="en",
       body_parameter_values=nil, media_type=nil, text_header_title=nil, media_url=nil, latitude=nil, longitude=nil, name=nil, address=nil,lto_expiration_time_ms=nil, coupon_code=nil,
       quick_replies=nil, actions=nil, carousel_cards=cards
@@ -509,7 +537,7 @@ class TestSERVICES < Test::Unit::TestCase
           "url": "https://www.luckyshrub.com?clickID=kqDGWd24Q5TRwoEQTICY7W1JKoXvaZOXWAS7h1P76s0R7Paec4"
         }
     response = @client.whatsapp.send_whatsapp_interactive_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
       interactive_type= "cta_url",
       header_type= "text",
@@ -530,7 +558,7 @@ class TestSERVICES < Test::Unit::TestCase
             "reply": {"id": "2", "title": "Credit"}
         }]
     response = @client.whatsapp.send_whatsapp_interactive_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
       interactive_type= "button",
       header_type= "text",
@@ -538,7 +566,7 @@ class TestSERVICES < Test::Unit::TestCase
       header_link=nil, header_file_name=nil,
       body_text= "Direct7 Networks is a messaging service provider that specializes in helping organizations efficiently communicate with their customers.",
       footer_text= "Thank You",
-      parameters= nil, sections=nil, 
+      parameters= nil, sections=nil,
       buttons=buttons
     )
     puts response
@@ -547,7 +575,7 @@ class TestSERVICES < Test::Unit::TestCase
    # Interactive : location request
    def test_send_whatsapp_interactive_message
     response = @client.whatsapp.send_whatsapp_interactive_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
       interactive_type= "location_request_message",
       header_type= nil,
@@ -555,7 +583,7 @@ class TestSERVICES < Test::Unit::TestCase
       header_link=nil, header_file_name=nil,
       body_text= "Lets make a trip!",
       footer_text= nil,
-      parameters= nil, sections=nil, 
+      parameters= nil, sections=nil,
       buttons=nil
     )
     puts response
@@ -614,7 +642,7 @@ class TestSERVICES < Test::Unit::TestCase
       ]
      }
       response = @client.whatsapp.send_whatsapp_interactive_message(
-        originator='971563XXXXXX', 
+        originator='971563XXXXXX',
         recipient='991999999XXXX',
         interactive_type= "address_message",
         header_type= "text",
@@ -626,7 +654,35 @@ class TestSERVICES < Test::Unit::TestCase
       )
       puts response
     end
+  # Interactive :Flow
+  def test_send_whatsapp_templated_message
+      flow_parameter= {
+                        "name": "flow",
+                        "parameters": {
+                        "flow_message_version": "3",
+                        "flow_token": "unused",
+                        "flow_id": "530404409952136",
+                        "flow_cta": "Book Demo",
+                        "flow_action": "navigate",
+                        "flow_action_payload": {
+                        "screen": "screen_"
+                        }
+                      }
+                    }
 
+      response = @client.whatsapp.send_whatsapp_interactive_message(
+      originator='971563XXXXXX',
+      recipient='991999999XXXX',
+      interactive_type= "flow",
+      header_type= "text",
+      header_text= "Payment$ for D7 Whatsapp Service",
+      header_link=nil, header_file_name=nil,
+      body_text= "Direct7 Networks is a messaging service provider that specializes in helping organizations efficiently communicate with their customers.",
+      footer_text= "Thank You",
+      parameters=flow_parameter,
+    )
+    puts response
+  end
   #  Interactive : list
   def test_send_whatsapp_interactive_message
     sections = [
@@ -657,7 +713,7 @@ class TestSERVICES < Test::Unit::TestCase
       }
     ]
     response = @client.whatsapp.send_whatsapp_interactive_message(
-      originator='971563XXXXXX', 
+      originator='971563XXXXXX',
       recipient='991999999XXXX',
       interactive_type= "list",
       header_type= "text",
@@ -665,7 +721,7 @@ class TestSERVICES < Test::Unit::TestCase
       header_link=nil, header_file_name=nil,
       body_text= "Direct7 Networks is a messaging service provider that specializes in helping organizations efficiently communicate with their customers.",
       footer_text= "Thank You",
-      parameters= nil, sections=sections, 
+      parameters= nil, sections=sections,
       buttons=nil, list_button_text='Choose Service'
     )
     puts response

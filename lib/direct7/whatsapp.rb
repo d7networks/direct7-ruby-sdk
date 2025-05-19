@@ -83,7 +83,7 @@ module Direct7
       response
     end
 
-    def send_whatsapp_templated_message(originator, recipient, template_id, language, body_parameter_values=nil, media_type=nil, text_header_title=nil, media_url=nil, latitude=nil, longitude=nil, name=nil, address=nil, lto_expiration_time_ms=nil, coupon_code=nil, quick_replies=nil, actions=nil, carousel_cards=nil)
+    def send_whatsapp_templated_message(originator, recipient, template_id, language, body_parameter_values=nil, media_type=nil, text_header_title=nil, media_url=nil, latitude=nil, longitude=nil, name=nil, address=nil, lto_expiration_time_ms=nil, coupon_code=nil, quick_replies=nil, actions=nil,button_flow=nil, carousel_cards=nil)
       allowed_media_types = ['image', 'document', 'video', 'audio', 'text', 'location']
       template = {
           'template_id' => template_id,
@@ -129,6 +129,12 @@ module Direct7
       if lto_expiration_time_ms
           message['content']['template']['limited_time_offer'] = {
             'expiration_time_ms' => lto_expiration_time_ms,
+          }
+      end
+
+      if button_flow
+          message['content']['template']['button'] = {
+          "button_flow"=>button_flow,
           }
       end
 
@@ -223,6 +229,8 @@ module Direct7
           message['content']['interactive']['action'] = {
               'parameters' => parameters,
           }
+        elsif interactive_type == 'flow'
+            message['content']['interactive']['action'] = parameters
         end
       end
 
