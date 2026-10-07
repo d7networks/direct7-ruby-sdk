@@ -110,6 +110,53 @@ client = Direct7::Client.new('Your API token')
 client.verify.get_status(otp_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1")
 ```
 
+### Verify V2
+
+Verify V2 is available under `client.verify.v2`. Existing `client.verify` calls continue to use V1.
+
+### Send OTP (V2)
+
+V2 uses a verification flow created in the dashboard (channels, language and message are configured in the flow).
+
+```ruby
+require 'direct7'
+
+client = Direct7::Client.new('Your API token')
+
+client.verify.v2.send_otp(recipient="+97150900XXXX", flow_id="Your flow ID")
+```
+
+### Re-Send OTP (V2)
+
+```ruby
+require 'direct7'
+
+client = Direct7::Client.new('Your API token')
+
+client.verify.v2.resend_otp(otp_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1")
+```
+
+### Verify OTP (V2)
+
+```ruby
+require 'direct7'
+
+client = Direct7::Client.new('Your API token')
+
+client.verify.v2.verify_otp(otp_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1", otp_code="1425")
+```
+
+### Check Verify Request Status (V2)
+
+```ruby
+require 'direct7'
+
+client = Direct7::Client.new('Your API token')
+
+# otp_id is the id returned in the response of send_otp
+client.verify.v2.get_status(otp_id="0012c7f5-2ba5-49db-8901-4ee9be6dc8d1")
+```
+
 ### Send Viber Message
 
 ```ruby
